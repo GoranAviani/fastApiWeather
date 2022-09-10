@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+# PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 
 @app.get("/")
 async def root():
