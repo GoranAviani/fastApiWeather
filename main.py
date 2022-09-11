@@ -14,9 +14,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 # PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+import time
 
 @app.get("/")
 async def root():
+    time.sleep(5.5)  # Pause 5.5 seconds
     return {"status": True, "showResults": True, "cityName": "Split 3", "weatherNow": "rain"}
 
 
