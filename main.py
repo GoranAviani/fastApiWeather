@@ -15,10 +15,11 @@ app.add_middleware(
 )
 # PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 import time
-
+import asyncio
 @app.get("/")
 async def root():
-    time.sleep(5.5)  # Pause 5.5 seconds
+    time.sleep(2.5)  # Pause 2.5 seconds
+
     return {"status": True, "showResults": True, "cityName": "Split 3", "weatherNow": "rain"}
 
 
